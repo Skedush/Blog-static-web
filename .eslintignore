@@ -1,0 +1,6 @@
+.umirc.js
+.eslintrc.js
+*.js
+
+public
+node_modules

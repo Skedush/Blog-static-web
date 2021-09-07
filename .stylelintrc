@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier"
+  ],
+  "ignoreFiles": [
+    "./src/**/*.js"
+  ],
+  "rules": {
+    "declaration-empty-line-before": null,
+    "no-descending-specificity": null,
+    "selector-pseudo-class-no-unknown": null,
+    "selector-pseudo-element-colon-notation": null,
+    "function-comma-newline-after": null,
+    "function-parentheses-newline-inside": null,
+    "string-quotes": "single",
+    "selector-list-comma-newline-before": "never-multi-line",
+    "media-query-list-comma-newline-before": "never-multi-line",
+    "indentation": 2,
+    "no-empty-source": null,
+    "no-missing-end-of-source-newline": null
+  }
+}
