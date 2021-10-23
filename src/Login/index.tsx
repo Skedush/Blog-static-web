@@ -11,7 +11,6 @@ const Login = () => {
       method: 'post',
       data: values,
     });
-    console.log('res: ', res);
   };
 
   return (

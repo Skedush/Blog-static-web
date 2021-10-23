@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { AxiosRequestConfig, Method as axiosMethod } from 'axios';
 
 interface ResponseData<T> {
   code?: number;
@@ -6,6 +6,9 @@ interface ResponseData<T> {
   message?: string;
   data?: T;
 }
+
+export type Method = axiosMethod;
+export interface RequestConfig extends AxiosRequestConfig {}
 
 export default function request(
   options: AxiosRequestConfig,
