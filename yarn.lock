@@ -2179,7 +2179,7 @@ babel-preset-jest@^26.6.2:
     babel-plugin-jest-hoist "^26.6.2"
     babel-preset-current-node-syntax "^1.0.0"
 
-babel-runtime@6.x, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
+babel-runtime@6.x, babel-runtime@^6.20.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://registry.nlark.com/babel-runtime/download/babel-runtime-6.26.0.tgz?cache=0&sync_timestamp=1622604548583&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fbabel-runtime%2Fdownload%2Fbabel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -3377,6 +3377,13 @@ dva-loading@^3.0.20:
   integrity sha1-wN0vsIFJJ1K5ktnOJwG4iCUYbgI=
   dependencies:
     "@babel/runtime" "^7.0.0"
+
+dva-model-extend@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.nlark.com/dva-model-extend/download/dva-model-extend-0.1.2.tgz#a3e615995feaaed5d141eb5b0a26cb98542a9820"
+  integrity sha1-o+YVmV/qrtXRQetbCibLmFQqmCA=
+  dependencies:
+    babel-runtime "^6.20.0"
 
 dva@^2.6.0-beta.20:
   version "2.6.0-beta.22"
