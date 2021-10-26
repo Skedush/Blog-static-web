@@ -1,3 +1,4 @@
+import { MenuModelState } from '@/models/menu';
 import { LoginModelState } from '@/pages/Login/model';
 import { Action, AnyAction } from 'redux';
 import { Effect, History, Location, Reducer, Route, Subscription } from 'umi';
@@ -12,6 +13,7 @@ export interface LoadingState {
 }
 export interface GlobalState {
   login: LoginModelState;
+  menu: MenuModelState;
 }
 
 export interface UmiComponentProps {

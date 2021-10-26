@@ -1,6 +1,8 @@
 import mdlExtend from '@/common/model';
 import { DvaModel } from '@/common/type';
 import api from '@/services';
+import store from 'store';
+import { history } from 'umi';
 
 const { login } = api;
 
@@ -10,7 +12,7 @@ export interface LoginModelState {
   refresh: string;
 }
 
-const IndexModel: DvaModel<LoginModelState> = {
+const LoginModel: DvaModel<LoginModelState> = {
   namespace: 'login',
   state: {
     user: {},
@@ -24,6 +26,10 @@ const IndexModel: DvaModel<LoginModelState> = {
       if (res && res.success && res.data) {
         const { data } = res;
         const { user, access, refresh } = data;
+        store.set('user', user);
+        store.set('token', access);
+        store.set('refresh', refresh);
+        history.push({ pathname: '/blog/home' });
         yield put({
           type: 'update',
           payload: { user: user, access: access, refresh: refresh },
@@ -38,4 +44,4 @@ const IndexModel: DvaModel<LoginModelState> = {
   },
 };
 
-export default mdlExtend(IndexModel);
+export default mdlExtend(LoginModel);

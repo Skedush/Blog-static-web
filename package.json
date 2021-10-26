@@ -44,13 +44,16 @@
     "lodash": "^4.17.21",
     "react": "17.x",
     "react-dom": "17.x",
+    "store": "^2.0.12",
     "umi": "^3.5.17"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@types/classnames": "^2.3.1",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/store": "^2.0.2",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
     "@umijs/preset-react": "1.x",

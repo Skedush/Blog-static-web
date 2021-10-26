@@ -1009,6 +1009,13 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/classnames@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.nlark.com/@types/classnames/download/@types/classnames-2.3.1.tgz#3c2467aa0f1a93f1f021e3b9bcf938bd5dfdc0dd"
+  integrity sha1-PCRnqg8ak/HwIeO5vPk4vV39wN0=
+  dependencies:
+    classnames "*"
+
 "@types/graceful-fs@^4.1.2":
   version "4.1.5"
   resolved "https://registry.nlark.com/@types/graceful-fs/download/@types/graceful-fs-4.1.5.tgz?cache=0&sync_timestamp=1629708058812&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fgraceful-fs%2Fdownload%2F%40types%2Fgraceful-fs-4.1.5.tgz#21ffba0d98da4350db64891f92a9e5db3cdb4e15"
@@ -1228,6 +1235,11 @@
   version "2.0.1"
   resolved "https://registry.nlark.com/@types/stack-utils/download/@types/stack-utils-2.0.1.tgz?cache=0&sync_timestamp=1629709282362&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fstack-utils%2Fdownload%2F%40types%2Fstack-utils-2.0.1.tgz#20f18294f797f2209b5f65c8e3b5c8e8261d127c"
   integrity sha1-IPGClPeX8iCbX2XI47XI6CYdEnw=
+
+"@types/store@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.nlark.com/@types/store/download/@types/store-2.0.2.tgz?cache=0&sync_timestamp=1629709619907&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fstore%2Fdownload%2F%40types%2Fstore-2.0.2.tgz#6263d4f1aab225032ea55b17d94f3b725a21c943"
+  integrity sha1-YmPU8aqyJQMupVsX2U87clohyUM=
 
 "@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.2":
   version "2.0.6"
@@ -2576,7 +2588,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@2.x, classnames@^2.2.0, classnames@^2.2.1, classnames@^2.2.3, classnames@^2.2.4, classnames@^2.2.5, classnames@^2.2.6, classnames@^2.3.1:
+classnames@*, classnames@2.x, classnames@^2.2.0, classnames@^2.2.1, classnames@^2.2.3, classnames@^2.2.4, classnames@^2.2.5, classnames@^2.2.6, classnames@^2.3.1:
   version "2.3.1"
   resolved "https://registry.npm.taobao.org/classnames/download/classnames-2.3.1.tgz?cache=0&sync_timestamp=1617399530187&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fclassnames%2Fdownload%2Fclassnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
   integrity sha1-38+jiR4wbsHa0QXQ6I9EF7hTXo4=
@@ -9322,6 +9334,11 @@ stealthy-require@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npm.taobao.org/stealthy-require/download/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
+
+store@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.npm.taobao.org/store/download/store-2.0.12.tgz#8c534e2a0b831f72b75fc5f1119857c44ef5d593"
+  integrity sha1-jFNOKguDH3K3X8XxEZhXxE711ZM=
 
 stream-browserify@^2.0.1:
   version "2.0.2"

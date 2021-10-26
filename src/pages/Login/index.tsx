@@ -2,21 +2,11 @@ import styles from './index.less';
 import classNames from 'classnames';
 import { Input, Form, Button } from '@/components';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
-import api from '@/services';
-import { useDispatch, useSelector } from 'umi';
-import { GlobalState } from '@/common/type';
+import { useDispatch } from 'umi';
+import { UmiComponentProps } from '@/common/type';
 
-const { login } = api;
-
-const Login = () => {
-  const { user, access, refresh } = useSelector((state: GlobalState) => {
-    return {
-      user: state.login.user,
-      access: state.login.access,
-      refresh: state.login.refresh,
-    };
-  });
-  console.log('user: ', user);
+interface Props extends UmiComponentProps {}
+const Login = (props: Props) => {
   const dispatch = useDispatch();
 
   const onFinish = async (values: any) => {
