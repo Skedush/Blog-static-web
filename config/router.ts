@@ -16,7 +16,6 @@ export default [
         path: '/blog/article/list',
         component: '@/pages/ArticleList',
       },
-
       {
         path: '/blog/home',
         component: '@/pages/Home',

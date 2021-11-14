@@ -1,6 +1,7 @@
 import mdlExtend from '@/common/model';
 import { DvaModel } from '@/common/type';
 import api from '@/services';
+import store from 'store';
 
 const { getMenu } = api;
 
@@ -19,6 +20,7 @@ const MenuModel: DvaModel<MenuModelState> = {
       const res = yield call(getMenu, payload);
       if (res && res.success && res.data) {
         const { data } = res;
+        store.set('menu', data);
         yield put({
           type: 'update',
           payload: { menu: data },

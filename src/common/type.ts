@@ -16,9 +16,11 @@ export interface GlobalState {
   menu: MenuModelState;
 }
 
+export type UmiLocation = Location & { query: { [prop: string]: string } };
+
 export interface UmiComponentProps {
   history: History;
-  location: Location;
+  location: UmiLocation;
   match: any;
   route: Route;
   routes: Route[];

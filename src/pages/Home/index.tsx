@@ -10,7 +10,6 @@ const IndexPage = (props: Props) => {
   useEffect(() => {
     dispatch({ type: 'menu/getMenu' });
   }, []);
-  console.log('Props: ', props);
   return (
     <div>
       <h1 className={styles.title}>Page Home</h1>
