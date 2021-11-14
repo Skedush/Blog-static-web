@@ -11,7 +11,6 @@ const Login = (props: Props) => {
 
   const onFinish = async (values: any) => {
     dispatch({ type: 'login/login', payload: values });
-    // const res = await login(values);
   };
 
   return (

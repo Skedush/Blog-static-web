@@ -1083,6 +1083,11 @@
   resolved "https://registry.nlark.com/@types/json5/download/@types/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
+"@types/lodash@^4.14.176":
+  version "4.14.176"
+  resolved "https://registry.npmmirror.com/@types/lodash/download/@types/lodash-4.14.176.tgz?cache=0&sync_timestamp=1634769339682&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Flodash%2Fdownload%2F%40types%2Flodash-4.14.176.tgz#641150fc1cda36fbfa329de603bbb175d7ee20c0"
+  integrity sha1-ZBFQ/BzaNvv6Mp3mA7uxddfuIMA=
+
 "@types/mdast@^3.0.0":
   version "3.0.10"
   resolved "https://registry.nlark.com/@types/mdast/download/@types/mdast-3.0.10.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fmdast%2Fdownload%2F%40types%2Fmdast-3.0.10.tgz#4724244a82a4598884cbbe9bcfd73dff927ee8af"
@@ -1119,6 +1124,11 @@
   version "15.7.4"
   resolved "https://registry.nlark.com/@types/prop-types/download/@types/prop-types-15.7.4.tgz?cache=0&sync_timestamp=1629708829833&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fprop-types%2Fdownload%2F%40types%2Fprop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha1-/PcgXCXf95Xuea8eMNosl5CAjxE=
+
+"@types/qs@^6.9.7":
+  version "6.9.7"
+  resolved "https://registry.nlark.com/@types/qs/download/@types/qs-6.9.7.tgz#63bb7d067db107cc1e457c303bc25d511febf6cb"
+  integrity sha1-Y7t9Bn2xB8weRXwwO8JdUR/r9ss=
 
 "@types/react-dom@^16.9.8":
   version "16.9.14"
@@ -7679,7 +7689,7 @@ q@^1.5.1:
   resolved "https://registry.npm.taobao.org/q/download/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
-qs@^6.9.1:
+qs@^6.10.1, qs@^6.9.1:
   version "6.10.1"
   resolved "https://registry.npm.taobao.org/qs/download/qs-6.10.1.tgz?cache=0&sync_timestamp=1616385511119&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fqs%2Fdownload%2Fqs-6.10.1.tgz#4931482fa8d647a5aab799c5271d2133b981fb6a"
   integrity sha1-STFIL6jWR6Wqt5nFJx0hM7mB+2o=

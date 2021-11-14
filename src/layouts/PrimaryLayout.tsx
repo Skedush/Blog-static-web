@@ -1,15 +1,26 @@
 // @flow
 import { GlobalState, UmiComponentProps } from '@/common/type';
 import { useSelector } from 'umi';
+import { isEmpty } from 'lodash';
+import { Header, Layout } from '@/components';
+import store from 'store';
+
+const { Content, Footer } = Layout;
 
 interface Props extends UmiComponentProps {}
 const PrimaryLayout = (props: Props) => {
-  const { menu } = useSelector(({ menu: { menu } }: GlobalState) => {
+  let { menu } = useSelector(({ menu: { menu } }: GlobalState) => {
     return { menu };
   });
-  console.log('menu: ', menu);
+  if (isEmpty(menu)) menu = store.get('menu');
 
   const { children } = props;
-  return <div>primaryLayout{children}</div>;
+  return (
+    <Layout>
+      <Header menu={menu} />
+      <Content>{children}</Content>
+      <Footer />
+    </Layout>
+  );
 };
 export default PrimaryLayout;
