@@ -19,7 +19,6 @@ const PrimaryLayout = (props: Props) => {
     <Layout>
       <Header menu={menu} />
       <Content>{children}</Content>
-      <Footer />
     </Layout>
   );
 };

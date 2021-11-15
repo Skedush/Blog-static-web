@@ -5,6 +5,14 @@ html {
     margin: 0;
     #root {
       height: 100%;
+      .ant-layout {
+        height: 100%;
+        display: flex;
+        .ant-layout-content {
+          display: flex;
+          flex-direction: column;
+        }
+      }
     }
   }
 }
@@ -16,7 +24,7 @@ html {
   width: 100%;
 }
 
-.flexAuto {
+.flex-auto {
   flex: auto;
 }
 .flex {

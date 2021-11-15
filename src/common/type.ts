@@ -1,4 +1,5 @@
 import { MenuModelState } from '@/models/menu';
+import { ArticleModelState } from '@/pages/ArticleList/model';
 import { LoginModelState } from '@/pages/Login/model';
 import { Action, AnyAction } from 'redux';
 import { Effect, History, Location, Reducer, Route, Subscription } from 'umi';
@@ -14,6 +15,7 @@ export interface LoadingState {
 export interface GlobalState {
   login: LoginModelState;
   menu: MenuModelState;
+  article: ArticleModelState;
 }
 
 export type UmiLocation = Location & { query: { [prop: string]: string } };
