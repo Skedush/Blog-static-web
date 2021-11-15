@@ -1,7 +1,10 @@
 import Menu from './Menu';
 export { default as Button } from './Button';
 export { default as Form } from './Form';
+export { default as Icon } from './Icon';
 export { default as Input } from './Input';
 export { default as Layout } from './Layout';
 export { Header } from './Layouts';
+export { default as List } from './List';
+export { default as Space } from './Space';
 export { Menu };

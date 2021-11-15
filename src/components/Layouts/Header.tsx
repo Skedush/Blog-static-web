@@ -11,7 +11,7 @@ interface Props {
 }
 export const Header = (props: Props) => {
   const { menu } = props;
-  const [current, setCurrent] = useState<string>(menu?.[0]?.id?.toString());
+  const [current, setCurrent] = useState<string>('');
   const location = useLocation() as UmiLocation;
 
   const handleClick = (e: { key: any }) => {
@@ -25,7 +25,7 @@ export const Header = (props: Props) => {
 
   useEffect(() => {
     const query = location?.query;
-    setCurrent(query.menu || menu?.[0]?.id?.toString());
+    setCurrent(query.menu || '');
   }, [location?.search]);
 
   const renderMenuItem = (item: any) => {
