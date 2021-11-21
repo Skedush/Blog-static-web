@@ -1,42 +1,50 @@
 import { GlobalState, UmiLocation } from '@/common/type';
 import classNames from 'classnames';
 import React, { useEffect } from 'react';
-import { useDispatch, useLocation, useSelector } from 'umi';
+import { useDispatch, useLocation, useSelector, useHistory } from 'umi';
 import { Icon, List, Space } from '@/components';
+import { isEmpty } from 'lodash';
+import store from 'store';
+import qs from 'qs';
 
 const { MessageOutlined, LikeOutlined, StarOutlined } = Icon;
 
 export default function IndexPage() {
   const dispatch = useDispatch();
-
-  const { articleList } = useSelector(
-    ({ article: { articleList } }: GlobalState) => {
-      return { articleList };
-    },
-  );
-
+  const history = useHistory();
   const location = useLocation() as UmiLocation;
   const query = location?.query;
+  const defaultSize = 10;
+  const defaultPage = 1;
+
+  let { articleList, menu } = useSelector(
+    ({ article: { articleList }, menu: { menu } }: GlobalState) => {
+      return { articleList, menu };
+    },
+  );
+  if (isEmpty(menu)) menu = store.get('menu');
 
   useEffect(() => {
     dispatch({
       type: 'article/getArticleList',
-      payload: { category: query?.menu || '' },
+      payload: {
+        category: query?.menu || menu[0].id,
+        page: query?.page || defaultPage,
+        size: query?.size || defaultSize,
+      },
     });
   }, [location?.search]);
 
-  const listData = [];
-  for (let i = 0; i < 23; i++) {
-    listData.push({
-      href: 'https://ant.design',
-      title: `ant design part ${i}`,
-      avatar: 'https://joeschmoe.io/api/v1/random',
-      description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team.',
-      content:
-        'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
-    });
-  }
+  // TODO
+  const onArticleClick = () => {
+    history.push({ pathname: '/blog/article' });
+  };
+
+  const onPaginationChange = (page: number) => {
+    const newQuery = { ...query, page: page };
+    const pathname = location.pathname + '?' + qs.stringify(newQuery);
+    history.push(pathname);
+  };
 
   const IconText = ({
     icon,
@@ -52,15 +60,16 @@ export default function IndexPage() {
   );
 
   const renderList = () => {
+    const current = parseInt(query?.page) || defaultPage;
     return (
       <List
         itemLayout="vertical"
         size="large"
         pagination={{
-          onChange: (page) => {
-            console.log(page);
-          },
-          pageSize: 3,
+          current,
+          onChange: onPaginationChange,
+          pageSize: defaultSize,
+          total: articleList?.count,
         }}
         dataSource={articleList?.content}
         renderItem={(item: any) => (
@@ -85,7 +94,7 @@ export default function IndexPage() {
             ]}
           >
             <List.Item.Meta
-              title={<a href={''}>{item.title}</a>}
+              title={<a onClick={onArticleClick}>{item.title}</a>}
               description={item.sub_title}
             />
           </List.Item>
