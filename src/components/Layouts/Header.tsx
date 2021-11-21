@@ -19,13 +19,13 @@ export const Header = (props: Props) => {
       return;
     }
     const params = { menu: e.key };
-    const pathname = location.pathname + '?' + qs.stringify(params);
+    const pathname = '/blog/article/list' + '?' + qs.stringify(params);
     history.push(pathname);
   };
 
   useEffect(() => {
     const query = location?.query;
-    setCurrent(query.menu || '');
+    setCurrent(query.menu || menu[0].id.toString());
   }, [location?.search]);
 
   const renderMenuItem = (item: any) => {

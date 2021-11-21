@@ -29,7 +29,7 @@ const LoginModel: DvaModel<LoginModelState> = {
         store.set('user', user);
         store.set('token', access);
         store.set('refresh', refresh);
-        history.push({ pathname: '/blog/home' });
+        history.push({ pathname: '/blog/article/list' });
         yield put({
           type: 'update',
           payload: { user: user, access: access, refresh: refresh },
