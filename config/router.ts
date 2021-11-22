@@ -14,7 +14,7 @@ export default [
     routes: [
       {
         path: '/blog/article',
-        component: '@/pages/article',
+        component: '@/pages/Article',
       },
       {
         path: '/blog/article/list',

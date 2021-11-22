@@ -4,12 +4,12 @@ import api from '@/services';
 
 const { getArticleList } = api;
 
-export interface ArticleModelState {
+export interface ArticleListModelState {
   articleList: any;
 }
 
-const ArticleModel: DvaModel<ArticleModelState> = {
-  namespace: 'article',
+const ArticleListModel: DvaModel<ArticleListModelState> = {
+  namespace: 'articleList',
   state: {
     articleList: [],
   },
@@ -33,4 +33,4 @@ const ArticleModel: DvaModel<ArticleModelState> = {
   },
 };
 
-export default mdlExtend(ArticleModel);
+export default mdlExtend(ArticleListModel);
