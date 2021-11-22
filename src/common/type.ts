@@ -1,5 +1,6 @@
 import { MenuModelState } from '@/models/menu';
-import { ArticleModelState } from '@/pages/ArticleList/model';
+import { ArticleModelState } from '@/pages/Article/model';
+import { ArticleListModelState } from '@/pages/ArticleList/model';
 import { LoginModelState } from '@/pages/Login/model';
 import { Action, AnyAction } from 'redux';
 import { Effect, History, Location, Reducer, Route, Subscription } from 'umi';
@@ -15,6 +16,7 @@ export interface LoadingState {
 export interface GlobalState {
   login: LoginModelState;
   menu: MenuModelState;
+  articleList: ArticleListModelState;
   article: ArticleModelState;
 }
 

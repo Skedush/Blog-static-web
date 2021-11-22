@@ -18,7 +18,7 @@ export default function IndexPage() {
   const defaultPage = 1;
 
   let { articleList, menu } = useSelector(
-    ({ article: { articleList }, menu: { menu } }: GlobalState) => {
+    ({ articleList: { articleList }, menu: { menu } }: GlobalState) => {
       return { articleList, menu };
     },
   );
@@ -26,7 +26,7 @@ export default function IndexPage() {
 
   useEffect(() => {
     dispatch({
-      type: 'article/getArticleList',
+      type: 'articleList/getArticleList',
       payload: {
         category: query?.menu || menu[0].id,
         page: query?.page || defaultPage,
@@ -35,9 +35,10 @@ export default function IndexPage() {
     });
   }, [location?.search]);
 
-  // TODO
-  const onArticleClick = () => {
-    history.push({ pathname: '/blog/article' });
+  const onArticleClick = (item: { id: any }) => {
+    const params = { id: item.id };
+    const pathname = '/blog/article' + '?' + qs.stringify(params);
+    history.push(pathname);
   };
 
   const onPaginationChange = (page: number) => {
@@ -94,7 +95,7 @@ export default function IndexPage() {
             ]}
           >
             <List.Item.Meta
-              title={<a onClick={onArticleClick}>{item.title}</a>}
+              title={<a onClick={(e) => onArticleClick(item)}>{item.title}</a>}
               description={item.sub_title}
             />
           </List.Item>
